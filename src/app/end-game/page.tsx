@@ -2,6 +2,7 @@ import Container from "@/components/Container/Container";
 import HandImage from "@/components/HandImage/HandImage";
 import PageLink from "@/components/PageLink/PageLink";
 
+import commonStyles from "../page.module.css";
 import s from "./page.module.css";
 
 interface Props {
@@ -13,12 +14,12 @@ interface Props {
 const EndGamePage = ({ searchParams }: Props) => {
   return (
     <main className={s.wrapper}>
-      <Container className={s.container}>
+      <Container className={commonStyles.container}>
         <HandImage />
-        <article className={s.textContentWrapper}>
+        <article className={commonStyles.textContentWrapper}>
           <div className={s.titleWrapper}>
             <h3 className={s.heading}>Total score:</h3>
-            <h1 className={s.title}>
+            <h1 className={commonStyles.title}>
               ${parseInt(searchParams.sum).toLocaleString()} earned
             </h1>
           </div>
