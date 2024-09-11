@@ -1,0 +1,34 @@
+.img {
+  width: 196px;
+  height: auto;
+}
+
+@media (min-width: 480px) {
+  .img {
+    width: 280px;
+  }
+}
+
+@media (min-width: 768px) {
+  .img {
+    width: 350px;
+  }
+}
+
+@media (min-width: 1360px) {
+  .img {
+    width: 451px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .img {
+    width: 520px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .img {
+    width: 600px;
+  }
+}

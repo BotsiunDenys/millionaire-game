@@ -1,0 +1,36 @@
+.link {
+  background-color: var(--orange);
+  width: 100%;
+  max-width: 296px;
+  align-self: center;
+  color: white;
+  font-size: var(--default-font-size);
+  line-height: var(--line-height);
+  padding: 16px 0;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 8px;
+  transition: all 0.15s linear;
+  text-decoration: none;
+}
+
+.link:hover {
+  background-color: var(--light-orange);
+}
+
+.link:active {
+  background-color: var(--dark-orange);
+}
+
+@media (min-width: 1024px) {
+  .link {
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 1360px) {
+  .link {
+    padding: 20px 0;
+    border-radius: 12px;
+  }
+}
