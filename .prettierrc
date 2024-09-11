@@ -5,7 +5,7 @@
   "tabWidth": 2,
   "trailingComma": "all",
   "bracketSpacing": true,
-  "importOrder": ["^@core/(.*)$", "^@server/(.*)$", "^@ui/(.*)$", "^[./]"],
+  "importOrder": ["^react(.*)$", "^next(.*)$", "^@/components/(.*)$", "^[./]"],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
   "plugins": ["@trivago/prettier-plugin-sort-imports"]
