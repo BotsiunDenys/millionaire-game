@@ -6,9 +6,7 @@ interface Props {
 }
 
 const Container = ({ children, className }: Props) => {
-  return (
-    <section className={`${s.wrapper} ${className}`}>{children}</section>
-  );
+  return <section className={`${s.wrapper} ${className}`}>{children}</section>;
 };
 
 export default Container;
