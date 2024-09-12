@@ -11,7 +11,7 @@ export default function Home() {
         <HandImage />
         <article className={s.textContentWrapper}>
           <h1 className={s.title}>Who wants to be a millionaire?</h1>
-          <PageLink href="/" label="start the game">
+          <PageLink href="/game" label="start the game">
             Start
           </PageLink>
         </article>

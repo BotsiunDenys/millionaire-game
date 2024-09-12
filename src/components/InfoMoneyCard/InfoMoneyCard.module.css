@@ -1,0 +1,110 @@
+.wrapper {
+  width: 240px;
+  padding: 8px 24px;
+  background-color: transparent;
+  font-size: var(--default-font-size);
+  display: flex;
+  align-items: center;
+  line-height: var(--line-height);
+  color: var(--black);
+  position: relative;
+}
+
+.wrapper::after,
+.wrapper::before {
+  content: "";
+  width: 41px;
+  height: 1px;
+  background-color: #d0d0d8;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  transition: all 0.15s linear;
+}
+
+.wrapper::after {
+  left: -41px;
+}
+
+.wrapper::before {
+  right: -41px;
+}
+
+.border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.border path {
+  transition: all 0.15s linear;
+  fill: var(--white);
+  stroke: var(--light-black);
+}
+
+.children {
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  color: var(--black);
+  transition: all 0.15s linear;
+}
+
+.wrapper.inactive .children {
+  color: var(--light-black);
+}
+
+.wrapper.active .children {
+  color: var(--orange);
+}
+
+.wrapper.active::before,
+.wrapper.active::after {
+  background-color: var(--orange);
+}
+
+.wrapper.active .border path {
+  stroke: var(--orange);
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    width: 240px;
+  }
+  .wrapper::before,
+  .wrapper::after {
+    width: 69px;
+  }
+  .wrapper::after {
+    left: -69px;
+  }
+
+  .wrapper::before {
+    right: -69px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .wrapper {
+    padding: 12px 24px;
+  }
+  .wrapper::before,
+  .wrapper::after {
+    width: 120px;
+  }
+  .wrapper::after {
+    left: -120px;
+  }
+
+  .wrapper::before {
+    right: -120px;
+  }
+}

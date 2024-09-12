@@ -11,6 +11,7 @@ const HandImage = () => {
       className={s.img}
       width={288}
       height={192}
+      priority
     />
   );
 };
