@@ -9,4 +9,4 @@
 
 `npm run format` - auto code formatting
 
-[Deployed website]("https://millionaire-game-inky.vercel.app/")
+[Deployed website](https://millionaire-game-inky.vercel.app/)
