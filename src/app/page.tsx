@@ -10,7 +10,7 @@ export default function Home() {
       <Container className={s.container}>
         <HandImage />
         <article className={s.textContentWrapper}>
-          <h1 className={s.title}>Who wants to be a millionaire?</h1>
+          <h1 className={s.title}>Who wants to be a millionaire?</h1>
           <PageLink href="/game" label="start the game">
             Start
           </PageLink>

@@ -4,14 +4,40 @@ import Image from "next/image";
 
 import InfoMoneyCard from "@/components/InfoMoneyCard/InfoMoneyCard";
 
+import { QuestionType } from "@/types/QuestionType";
+
 import s from "./SideBarInfoSection.module.css";
 
 interface Props {
   isToggled: boolean;
   setIsToggled: React.Dispatch<SetStateAction<boolean>>;
+  questions: QuestionType[];
+  currentQuestion: QuestionType;
 }
 
-const SideBarInfoSection = ({ isToggled, setIsToggled }: Props) => {
+const SideBarInfoSection = ({
+  isToggled,
+  setIsToggled,
+  questions,
+  currentQuestion,
+}: Props) => {
+  // indentifying variant of money card based on current question
+  const getCardVariant = (question: QuestionType) => {
+    const searchedIndex = questions.findIndex(
+      (data) => data.prize === question.prize,
+    );
+    const currentQuestionIndex = questions.findIndex(
+      (data) => data.prize === currentQuestion.prize,
+    );
+
+    if (currentQuestionIndex === searchedIndex) {
+      return "active";
+    } else if (currentQuestionIndex > searchedIndex) {
+      return "inactive";
+    }
+    return "default";
+  };
+
   return (
     <aside className={`${s.wrapper} ${isToggled ? s.visibleWrapper : ""}`}>
       <Image
@@ -23,18 +49,17 @@ const SideBarInfoSection = ({ isToggled, setIsToggled }: Props) => {
         className={s.closeIcon}
       />
       <div className={s.infoWrapper}>
-        <InfoMoneyCard variant="default">$1 000 000</InfoMoneyCard>
-        <InfoMoneyCard variant="default">$500 000</InfoMoneyCard>
-        <InfoMoneyCard variant="default">$250 000</InfoMoneyCard>
-        <InfoMoneyCard variant="default">$125 000</InfoMoneyCard>
-        <InfoMoneyCard variant="default">$64 000</InfoMoneyCard>
-        <InfoMoneyCard variant="default">$32 000</InfoMoneyCard>
-        <InfoMoneyCard variant="default">$16 000</InfoMoneyCard>
-        <InfoMoneyCard variant="default">$8 000</InfoMoneyCard>
-        <InfoMoneyCard variant="default">$4 000</InfoMoneyCard>
-        <InfoMoneyCard variant="default">$2 000</InfoMoneyCard>
-        <InfoMoneyCard variant="active">$1 000</InfoMoneyCard>
-        <InfoMoneyCard variant="inactive">$500</InfoMoneyCard>
+        {questions
+          .slice() // creating copy of an array to avoid questions reversing
+          .reverse()
+          .map((question) => (
+            <InfoMoneyCard
+              variant={getCardVariant(question)}
+              key={question.prize}
+            >
+              ${question.prize.toLocaleString()}
+            </InfoMoneyCard>
+          ))}
       </div>
     </aside>
   );

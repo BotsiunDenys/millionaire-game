@@ -1,0 +1,124 @@
+{
+  "questions": [
+    {
+      "question": "What is the capital of France?",
+      "answers": [
+        { "title": "Berlin", "correct": false },
+        { "title": "Madrid", "correct": false },
+        { "title": "Paris", "correct": true },
+        { "title": "Rome", "correct": false }
+      ],
+      "prize": 500
+    },
+    {
+      "question": "Which planet is known as the Red Planet?",
+      "answers": [
+        { "title": "Venus", "correct": false },
+        { "title": "Mars", "correct": true },
+        { "title": "Jupiter", "correct": false },
+        { "title": "Saturn", "correct": false }
+      ],
+      "prize": 1000
+    },
+    {
+      "question": "Who wrote the play 'Romeo and Juliet'?",
+      "answers": [
+        { "title": "William Shakespeare", "correct": true },
+        { "title": "Jane Austen", "correct": false },
+        { "title": "Charles Dickens", "correct": false },
+        { "title": "Leo Tolstoy", "correct": false }
+      ],
+      "prize": 2000
+    },
+    {
+      "question": "Which element has the chemical symbol 'O'?",
+      "answers": [
+        { "title": "Oxygen", "correct": true },
+        { "title": "Gold", "correct": false },
+        { "title": "Osmium", "correct": false },
+        { "title": "Oganesson", "correct": false }
+      ],
+      "prize": 5000
+    },
+    {
+      "question": "How many continents are there on Earth?",
+      "answers": [
+        { "title": "Five", "correct": false },
+        { "title": "Six", "correct": false },
+        { "title": "Seven", "correct": true },
+        { "title": "Eight", "correct": false }
+      ],
+      "prize": 10000
+    },
+    {
+      "question": "What is the largest ocean on Earth?",
+      "answers": [
+        { "title": "Atlantic Ocean", "correct": false },
+        { "title": "Indian Ocean", "correct": false },
+        { "title": "Pacific Ocean", "correct": true },
+        { "title": "Arctic Ocean", "correct": false }
+      ],
+      "prize": 20000
+    },
+    {
+      "question": "Who painted the Mona Lisa?",
+      "answers": [
+        { "title": "Vincent van Gogh", "correct": false },
+        { "title": "Leonardo da Vinci", "correct": true },
+        { "title": "Pablo Picasso", "correct": false },
+        { "title": "Claude Monet", "correct": false }
+      ],
+      "prize": 50000
+    },
+    {
+      "question": "Which country is the largest by area?",
+      "answers": [
+        { "title": "China", "correct": false },
+        { "title": "United States", "correct": false },
+        { "title": "Russia", "correct": true },
+        { "title": "Canada", "correct": false }
+      ],
+      "prize": 100000
+    },
+    {
+      "question": "What is the hardest natural substance on Earth?",
+      "answers": [
+        { "title": "Iron", "correct": false },
+        { "title": "Gold", "correct": false },
+        { "title": "Diamond", "correct": true },
+        { "title": "Platinum", "correct": false }
+      ],
+      "prize": 200000
+    },
+    {
+      "question": "Who discovered penicillin?",
+      "answers": [
+        { "title": "Alexander Fleming", "correct": true },
+        { "title": "Marie Curie", "correct": false },
+        { "title": "Albert Einstein", "correct": false },
+        { "title": "Isaac Newton", "correct": false }
+      ],
+      "prize": 400000
+    },
+    {
+      "question": "In which year did the Titanic sink?",
+      "answers": [
+        { "title": "1912", "correct": true },
+        { "title": "1921", "correct": false },
+        { "title": "1898", "correct": false },
+        { "title": "1905", "correct": false }
+      ],
+      "prize": 500000
+    },
+    {
+      "question": "Which is the longest river in the world?",
+      "answers": [
+        { "title": "Amazon River", "correct": true },
+        { "title": "Nile River", "correct": false },
+        { "title": "Yangtze River", "correct": false },
+        { "title": "Mississippi River", "correct": false }
+      ],
+      "prize": 1000000
+    }
+  ]
+}

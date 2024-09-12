@@ -1,3 +1,5 @@
+import { redirect } from "next/navigation";
+
 import Container from "@/components/Container/Container";
 import HandImage from "@/components/HandImage/HandImage";
 import PageLink from "@/components/PageLink/PageLink";
@@ -12,6 +14,8 @@ interface Props {
 }
 
 const EndGamePage = ({ searchParams }: Props) => {
+  if (!searchParams.sum) redirect("/");
+
   return (
     <main className={s.wrapper}>
       <Container className={commonStyles.container}>
