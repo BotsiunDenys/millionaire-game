@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 
 import { AnswerType, QuestionType } from "@/types/QuestionType";
 
@@ -13,13 +13,23 @@ interface Props {
   className?: string;
   questions: QuestionType[];
   answer: AnswerType;
+  disabled: boolean;
+  setDisabled: React.Dispatch<SetStateAction<boolean>>;
 }
 
-const Button = ({ onClick, children, className, answer }: Props) => {
+const Button = ({
+  onClick,
+  children,
+  className,
+  answer,
+  disabled,
+  setDisabled,
+}: Props) => {
   const [styles, setStyles] = useState("");
 
   // setting styles based correct answer
   const handleSelect = () => {
+    setDisabled(true);
     setStyles(s.selectedButton);
     setTimeout(() => {
       if (answer.correct) {
@@ -36,6 +46,7 @@ const Button = ({ onClick, children, className, answer }: Props) => {
       type="button"
       className={`${s.button} ${className} ${styles}`}
       onClick={handleSelect}
+      disabled={disabled}
     >
       <ButtonBorder className={s.border} />
       <span className={s.buttonContent}>

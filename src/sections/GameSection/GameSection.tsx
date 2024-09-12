@@ -24,6 +24,8 @@ const GameSection = ({ questions }: Props) => {
   const [currentQuestion, setCurrentQuestion] = useState<QuestionType | null>(
     null,
   );
+  // for disabling all the buttons when one is clicked and timeout is working
+  const [clickedButton, setClickedButton] = useState(false);
 
   // for mobile and tablet versions
   const [isToggledSidebar, setIsToggledSidebar] = useState(false);
@@ -57,6 +59,7 @@ const GameSection = ({ questions }: Props) => {
     const finishGame = () => {
       router.push(`/end-game?sum=${currentQuestion?.prize}`);
       localStorage.removeItem("localCurrentQuestion");
+      setClickedButton(false);
     };
     if (!answer.correct) {
       finishGame();
@@ -78,6 +81,7 @@ const GameSection = ({ questions }: Props) => {
       } else {
         finishGame();
       }
+      setClickedButton(false);
     }
   };
 
@@ -99,6 +103,8 @@ const GameSection = ({ questions }: Props) => {
         <div className={s.buttonsWrapper}>
           {currentQuestion.answers.map((answer, index) => (
             <Button
+              disabled={clickedButton}
+              setDisabled={setClickedButton}
               questions={questions}
               answer={answer}
               onClick={handleClick}

@@ -98,6 +98,10 @@
   background-color: var(--red);
 }
 
+.button:disabled {
+  cursor: default;
+}
+
 @media (min-width: 768px) {
   .button {
     padding: 24px 28px;
